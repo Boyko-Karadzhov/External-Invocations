@@ -45,3 +45,7 @@ This sample compiles a C source file into a DLL using C#.
 
    compiler.Compile(arguments);
 ```
+
+## See also
+
+Now that you are compiling DLLs on the fly you can also call them right away by using the Dynamic-Libraries project: [Dynamic-Libraries](https://github.com/Boyko-Karadzhov/Dynamic-Libraries)
