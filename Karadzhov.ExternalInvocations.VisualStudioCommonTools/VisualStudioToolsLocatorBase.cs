@@ -1,14 +1,32 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
 {
-    internal abstract class VisualStudioToolsLocatorBase : IVisualStudioToolsLocator
+    /// <summary>
+    /// Utility class used for locating Visual Studio tools.
+    /// </summary>
+    public abstract class VisualStudioToolsLocatorBase : IVisualStudioToolsLocator
     {
+        /// <summary>
+        /// Gets the file name of the C/C++ Optimizing Compiler (cl.exe).
+        /// </summary>
         public abstract string CL { get; }
+
+        /// <summary>
+        /// Gets the path to the lib and obj files that are distributed with Visual Studio.
+        /// </summary>
         public abstract string Libraries { get; }
+
+        /// <summary>
+        /// Gets the path to the MFC and ATL libraries.
+        /// </summary>
         public abstract string AtlMfcLib { get; }
 
+        /// <summary>
+        /// Gets the path to the header files that are distributed with Visual Studio.
+        /// </summary>
         public string Include
         { 
             get
@@ -17,6 +35,9 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
             }
         }
 
+        /// <summary>
+        /// Gets the path to the MFC and ATL header files.
+        /// </summary>
         public string AtlMfcInclude 
         { 
             get
@@ -25,7 +46,13 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
             }
         }
 
-        protected static string VcPath
+        /// <summary>
+        /// Gets the VC path.
+        /// </summary>
+        /// <value>
+        /// The VC path.
+        /// </value>
+        public static string VCPath
         {
             get
             {

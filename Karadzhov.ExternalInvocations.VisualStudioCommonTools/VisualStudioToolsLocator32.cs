@@ -32,19 +32,19 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         private static string FindClPath()
         {
             if (Environment.Is64BitOperatingSystem)
-                return Path.Combine(VisualStudioToolsLocatorBase.VcPath, "bin\\amd64_x86\\cl.exe");
+                return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "bin\\amd64_x86\\cl.exe");
             else
-                return Path.Combine(VisualStudioToolsLocatorBase.VcPath, "bin\\cl.exe");
+                return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "bin\\cl.exe");
         }
 
         private static string FindLibPath()
         {
-            return Path.Combine(VisualStudioToolsLocatorBase.VcPath, "lib");
+            return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "lib");
         }
 
         private static string FindAtlMfcLibPath()
         {
-            return Path.Combine(VisualStudioToolsLocatorBase.VcPath, "atlmfc\\lib");
+            return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "atlmfc\\lib");
         }
 
         private static readonly Lazy<string> clPath = new Lazy<string>(VisualStudioToolsLocator32.FindClPath);
