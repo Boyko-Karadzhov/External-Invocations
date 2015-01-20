@@ -10,6 +10,12 @@
 ## Disclaimer
 - This project does not contain a compiler. It invokes the VC compiler that is present on the system where VisualStudioTools assembly is called.
 
+## Installation
+
+To install External-Invocations, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console)
+
+    PM> Install-Package Karadzhov.ExternalInvocations
+
 ## Usage
 
 ### Invoking the VC compiler
