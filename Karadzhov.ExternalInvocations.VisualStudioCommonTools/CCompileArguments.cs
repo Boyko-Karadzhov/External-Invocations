@@ -21,7 +21,7 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         }
 
         /// <summary>
-        /// Gets or sets the output file name..
+        /// Gets or sets the output file name.
         /// </summary>
         public string Output { get; set; }
 
