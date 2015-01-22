@@ -12,20 +12,62 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9F012B
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karadzhov.ExternalInvocations.NvidiaToolkit", "Karadzhov.ExternalInvocations.NvidiaToolkit\Karadzhov.ExternalInvocations.NvidiaToolkit.csproj", "{3053468D-40A7-4E98-A51E-611C22114FC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E856FE4-78D6-41F9-B991-59CF940FD816}"
+	ProjectSection(SolutionItems) = preProject
+		CustomDictionary.xml = CustomDictionary.xml
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Release|Win32.ActiveCfg = Release|Any CPU
+		{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}.Release|x64.ActiveCfg = Release|Any CPU
 		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Release|Win32.ActiveCfg = Release|Any CPU
+		{ABD68C03-32E0-464A-A579-FA6CFED77D14}.Release|x64.ActiveCfg = Release|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Release|Win32.ActiveCfg = Release|Any CPU
+		{3053468D-40A7-4E98-A51E-611C22114FC8}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
