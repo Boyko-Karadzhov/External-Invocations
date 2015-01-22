@@ -29,8 +29,8 @@ To install External-Invocations, run the following command in the [Package Manag
    - Choose level of optimization by setting the **Optimizations** property (available options are **None** and **MaximumOptimizations**);
    - Set **IsDll** to true if you want the compiler to produce a dynamic library;
    - The Output property to instruct the linker about the output file name ([/OUT (Output File Name)](http://msdn.microsoft.com/en-us/library/8htcy933.aspx));
-1. Call COptimizingCompiler.Compile with the arguments you have created to invoke the compiler;
-   - There is no return value. **Karadzhov.ExternalInvocations.VisualStudioCommonTools.CompilationException** is thrown if the compilation was not successful.
+1. Call **COptimizingCompiler.Compile** with the arguments you have created to invoke the compiler;
+   - There is no return value. _Karadzhov.ExternalInvocations.VisualStudioCommonTools.CompilationException_ is thrown if the compilation was not successful.
 
 ### Sample
 This sample compiles a C source file into a DLL using C#.
