@@ -5,7 +5,8 @@
 - API for compiling code using the Visual Studio C/C++ Optimizing Compile;
 
 ## Requirements
-- Visual Studio 2010 - 2013;
+- Visual Studio 2010 - 2013 (for VisualStudioCommonTools);
+- [NVidia CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) (for NvidiaToolkit);
 
 ## Disclaimer
 - This project does not contain a compiler. It invokes the VC compiler that is present on the system where VisualStudioTools assembly is called.
@@ -45,6 +46,17 @@ This sample compiles a C source file into a DLL using C#.
 
    compiler.Compile(arguments);
 ```
+
+### Invoking the CUDA compiler
+1. Make sure your project references the **Karadzhov.ExternalInvocations.NvidiaToolkit** assembly;
+1. Add a using statement for this namespace: **Karadzhov.ExternalInvocations.NvidiaToolkit**;
+1. Create a new instance of the **CudaCompiler** class;
+1. Create a new instance of the **CudaCompileArguments** class;
+   - This class inherits from _CCompileArguments_. Refer the instructions for the VC compiler for details;
+   - Set the **ComputeCapability** property to specify the target [GPU compute capability](https://developer.nvidia.com/cuda-gpus);
+   - Set the **TargetProcessorArchitecture** to specify whether 32 or 64 bit binary should be compiled;
+1. Call **CudaCompiler.Compile** with the arguments you have created to invoke the compiler;
+   - There is no return value. _Karadzhov.ExternalInvocations.VisualStudioCommonTools.CompilationException_ is thrown if the compilation was not successful.
 
 ## See also
 
