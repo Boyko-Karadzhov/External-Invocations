@@ -11,5 +11,9 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
     /// </summary>
     public class CudaCompiler
     {
+        public void Compile(CudaCompileArguments arguments)
+        {
+
+        }
     }
 }

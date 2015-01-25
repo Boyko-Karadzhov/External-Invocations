@@ -29,10 +29,13 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools.Tests
             var samplesPath = Path.Combine(Utilities.TestProjectPath(), "Samples");
 
             var compiler = new COptimizingCompiler(Environment.Is64BitProcess ? ProcessorArchitecture.Amd64 : ProcessorArchitecture.X86);
-            var arguments = new CCompileArguments();
+            var arguments = new CCompileArguments()
+            {
+                Optimizations = CompileOptimization.None,
+                IsDll = true
+            };
             arguments.Files.Add(Path.Combine(samplesPath, "sum.c"));
-            arguments.Optimizations = CompileOptimization.MaximumOptimization;
-            arguments.IsDll = true;
+
             var dllPath = Path.Combine(samplesPath, "bin\\sum.dll");
             arguments.Output = dllPath;
 
@@ -51,10 +54,13 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools.Tests
             var samplesPath = Path.Combine(Utilities.TestProjectPath(), "Samples");
 
             var compiler = new COptimizingCompiler(Environment.Is64BitProcess ? ProcessorArchitecture.Amd64 : ProcessorArchitecture.X86);
-            var arguments = new CCompileArguments();
+            var arguments = new CCompileArguments()
+            {
+                Optimizations = CompileOptimization.MaximumOptimization,
+                IsDll = true
+            };
             arguments.Files.Add(Path.Combine(samplesPath, "sum_comp_error.c"));
-            arguments.Optimizations = CompileOptimization.MaximumOptimization;
-            arguments.IsDll = true;
+            
             var dllPath = Path.Combine(samplesPath, "bin\\sum_comp_error.dll");
             arguments.Output = dllPath;
 

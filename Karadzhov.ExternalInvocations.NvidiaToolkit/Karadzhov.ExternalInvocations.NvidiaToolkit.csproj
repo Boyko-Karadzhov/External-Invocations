@@ -54,7 +54,9 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="CudaCompileArguments.cs" />
     <Compile Include="CudaCompiler.cs" />
+    <Compile Include="CudaComputeCapability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +66,12 @@
     <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
       <Link>CustomDictionary.xml</Link>
     </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Karadzhov.ExternalInvocations.VisualStudioCommonTools\Karadzhov.ExternalInvocations.VisualStudioCommonTools.csproj">
+      <Project>{b2eca655-23c5-416e-b6ab-df9c5d3ab605}</Project>
+      <Name>Karadzhov.ExternalInvocations.VisualStudioCommonTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
