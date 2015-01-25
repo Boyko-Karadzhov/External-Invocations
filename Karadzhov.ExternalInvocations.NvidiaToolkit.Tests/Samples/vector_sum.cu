@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-__declspec(dllexport) int* addWithCuda(const int *a, const int *b, int size);
+extern "C" __declspec(dllexport) cudaError_t __cdecl addWithCuda(int* c, const int *a, const int *b, int size);
 
 __global__ void addKernel(int *c, const int *a, const int *b)
 {
@@ -13,12 +13,11 @@ __global__ void addKernel(int *c, const int *a, const int *b)
 }
 
 // Helper function for using CUDA to add vectors in parallel.
-int* addWithCuda(const int *a, const int *b, int size)
+cudaError_t __cdecl addWithCuda(int* c, const int *a, const int *b, int size)
 {
     int *dev_a = 0;
     int *dev_b = 0;
     int *dev_c = 0;
-	int *c = new int[size];
     cudaError_t cudaStatus;
 
     // Choose which GPU to run on, change this on a multi-GPU system.
@@ -90,5 +89,5 @@ Error:
     cudaFree(dev_a);
     cudaFree(dev_b);
     
-    return c;
+    return cudaStatus;
 }

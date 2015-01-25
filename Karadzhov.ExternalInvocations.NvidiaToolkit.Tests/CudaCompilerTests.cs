@@ -10,36 +10,47 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit.Tests
     [TestClass]
     public class CudaCompilerTests
     {
+        [TestInitialize]
+        public void Initialize()
+        {
+            DynamicLibraryManager.Reset();
+
+            var binPath = Path.Combine(CudaCompilerTests.GetSamplesPath(), "bin");
+            if (Directory.Exists(binPath))
+            {
+                Directory.Delete(binPath, recursive: true);
+            }
+
+            Directory.CreateDirectory(binPath);
+        }
+
         [TestMethod]
         public void Compile_DllWithCudaSource_ValidDll()
         {
             var samplesPath = CudaCompilerTests.GetSamplesPath();
-            string targetDll;
-            if (Environment.Is64BitProcess)
-                targetDll = samplesPath + "x64\\vector_sum.dll";
-            else
-                targetDll = samplesPath + "bin\\vector_sum.dll";
+            var targetDll = samplesPath + "bin\\vector_sum.dll";
 
             var compile = new CudaCompiler();
             var arguments = new CudaCompileArguments()
             {
                 ComputeCapability = CudaComputeCapability.Cuda21,
-                TargetCPUArchitecture = Environment.Is64BitProcess ? ProcessorArchitecture.Amd64 : ProcessorArchitecture.X86,
+                TargetProcessorArchitecture = Environment.Is64BitProcess ? ProcessorArchitecture.Amd64 : ProcessorArchitecture.X86,
                 IsDll = true,
                 Output = targetDll,
                 Optimizations = CompileOptimization.MaximumOptimization
             };
             arguments.Files.Add(samplesPath + "vector_sum.cu");
+            new CudaCompiler().Compile(arguments);
 
             Assert.IsTrue(File.Exists(targetDll));
 
             var size = 5;
             var a = new int[] { 1, 2, 3, 4, 5 };
             var b = new int[] { 6, 7, 8, 9, 10 };
-            var c = DynamicLibraryManager.Invoke<int[]>(targetDll, "addWithCuda", a, b, size);
+            var c = new int[5];
+            DynamicLibraryManager.Invoke<int>(targetDll, "addWithCuda", c, a, b, size);
 
             Assert.IsNotNull(c);
-            Assert.AreEqual(5, c.Length);
             Assert.AreEqual(7, c[0]);
             Assert.AreEqual(9, c[1]);
             Assert.AreEqual(11, c[2]);

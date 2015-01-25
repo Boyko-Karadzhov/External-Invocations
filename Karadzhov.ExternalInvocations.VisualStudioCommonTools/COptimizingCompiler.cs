@@ -57,11 +57,13 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         {
             var commandArguments = this.CommandArguments(arguments);
 
-            var startInfo = new ProcessStartInfo(this.toolsLocator.CL, commandArguments);
-            startInfo.RedirectStandardOutput = true;
-            startInfo.RedirectStandardError = true;
-            startInfo.CreateNoWindow = true;
-            startInfo.UseShellExecute = false;
+            var startInfo = new ProcessStartInfo(this.toolsLocator.CL, commandArguments)
+            {
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                CreateNoWindow = true,
+                UseShellExecute = false
+            };
 
             using (var compileProcess = new Process())
             {
@@ -76,7 +78,7 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
 
         private string CommandArguments(CCompileArguments arguments)
         {
-            var commandParts = new List<string>(10);
+            var commandParts = new List<string>(15);
 
             if (CompileOptimization.None == arguments.Optimizations)
                 commandParts.Add("/Od");

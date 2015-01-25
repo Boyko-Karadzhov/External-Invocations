@@ -31,10 +31,7 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
 
         private static string FindClPath()
         {
-            if (Environment.Is64BitOperatingSystem)
-                return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "bin\\amd64_x86\\cl.exe");
-            else
-                return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "bin\\cl.exe");
+            return Path.Combine(VisualStudioToolsLocatorBase.VCPath, "bin\\cl.exe");
         }
 
         private static string FindLibPath()
