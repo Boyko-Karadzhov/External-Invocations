@@ -38,9 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Karadzhov.Interop.DynamicLibraries, Version=1.0.1.0, Culture=neutral, PublicKeyToken=7a43160afbfa8ffe, processorArchitecture=MSIL">
+    <Reference Include="Karadzhov.Interop.DynamicLibraries, Version=1.1.0.0, Culture=neutral, PublicKeyToken=7a43160afbfa8ffe, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Karadzhov.Interop.DynamicLibraries.1.0.1.0\lib\Karadzhov.Interop.DynamicLibraries.dll</HintPath>
+      <HintPath>..\packages\Karadzhov.Interop.DynamicLibraries.1.1.0.0\lib\Karadzhov.Interop.DynamicLibraries.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -68,9 +68,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
