@@ -4,7 +4,7 @@ using Microsoft.Win32;
 
 namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
 {
-    public static class WindowsSdkLocator
+    internal static class WindowsSdkLocator
     {
         public static string Root
         {

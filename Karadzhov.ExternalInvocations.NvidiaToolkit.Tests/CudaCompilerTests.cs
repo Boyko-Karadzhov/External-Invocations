@@ -33,7 +33,7 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit.Tests
             var compile = new CudaCompiler();
             var arguments = new CudaCompileArguments()
             {
-                ComputeCapability = CudaComputeCapability.Cuda21,
+                ComputeCapability = CudaComputeCapability.Cuda50,
                 TargetProcessorArchitecture = Environment.Is64BitProcess ? ProcessorArchitecture.Amd64 : ProcessorArchitecture.X86,
                 IsDll = true,
                 Output = targetDll,

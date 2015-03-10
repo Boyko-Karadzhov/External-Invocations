@@ -61,10 +61,27 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
             }
         }
 
+        /// <summary>
+        /// Gets the IDE path.
+        /// </summary>
+        public string IDE
+        {
+            get 
+            {
+                return VisualStudioToolsLocatorBase.ide.Value;
+            }
+        }
+
         private static string FindVcPath()
         {
             var fromEnv = VisualStudioToolsLocatorBase.PathFromEnvironment();
             return Path.Combine(fromEnv, "..\\..\\VC");
+        }
+
+        private static string FindIdePath()
+        {
+            var fromEnv = VisualStudioToolsLocatorBase.PathFromEnvironment();
+            return Path.Combine(fromEnv, "..\\IDE");
         }
 
         private static string PathFromEnvironment()
@@ -104,5 +121,6 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         private static readonly Lazy<string> vcPath = new Lazy<string>(VisualStudioToolsLocatorBase.FindVcPath);
         private static readonly Lazy<string> includePath = new Lazy<string>(VisualStudioToolsLocatorBase.FindIncludePath);
         private static readonly Lazy<string> atlMfcIncludePath = new Lazy<string>(VisualStudioToolsLocatorBase.FindAtlMfcIncludePath);
+        private static readonly Lazy<string> ide = new Lazy<string>(VisualStudioToolsLocatorBase.FindIdePath);
     }
 }

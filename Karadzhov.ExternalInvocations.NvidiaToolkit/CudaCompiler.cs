@@ -39,7 +39,7 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
                 compilerProcess.WaitForExit();
 
                 if (0 != compilerProcess.ExitCode)
-                    throw new CompilationException("Compilation failed. Check exception's Compiler Output property for details.", compilerProcess.StandardError.ReadToEnd());
+                    throw new CompilationException("Compilation failed. Check exception's Compiler Output property for details.", compilerProcess.StandardOutput.ReadToEnd(), compilerProcess.StandardError.ReadToEnd());
             }
         }
 

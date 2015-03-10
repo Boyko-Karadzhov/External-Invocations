@@ -45,6 +45,7 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
             : base(serializationInfo, context)
         {
             this.CompilerOutput = serializationInfo.GetString("CompilerOutput");
+            this.CompilerError = serializationInfo.GetString("CompilerError");
         }
 
         /// <summary>
@@ -52,10 +53,12 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         /// </summary>
         /// <param name="message">The message.</param>
         /// <param name="compilerOutput">The compiler output.</param>
-        public CompilationException(string message, string compilerOutput) 
+        /// <param name="compilerError">The compiler error.</param>
+        public CompilationException(string message, string compilerOutput, string compilerError) 
             : base(message)
         {
             this.CompilerOutput = compilerOutput;
+            this.CompilerError = compilerError;
         }
 
         /// <summary>
@@ -65,6 +68,14 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         /// The compiler output.
         /// </value>
         public string CompilerOutput { get; private set; }
+
+        /// <summary>
+        /// Gets the compiler error.
+        /// </summary>
+        /// <value>
+        /// The compiler error.
+        /// </value>
+        public string CompilerError { get; private set; }
 
         /// <summary>
         /// When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.
@@ -82,6 +93,8 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
                 throw new ArgumentNullException("info");
 
             info.AddValue("CompilerOutput", this.CompilerOutput);
+            info.AddValue("CompilerError", this.CompilerError);
+
             base.GetObjectData(info, context);
         }
     }

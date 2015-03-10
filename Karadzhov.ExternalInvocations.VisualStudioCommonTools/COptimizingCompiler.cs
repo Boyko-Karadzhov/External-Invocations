@@ -65,6 +65,9 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
                 UseShellExecute = false
             };
 
+            if (ProcessorArchitecture.X86 == this.targetArchitecture)
+                startInfo.EnvironmentVariables["PATH"] = this.toolsLocator.IDE + ";" + startInfo.EnvironmentVariables["PATH"];
+
             using (var compileProcess = new Process())
             {
                 compileProcess.StartInfo = startInfo;
@@ -72,7 +75,7 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
                 compileProcess.WaitForExit();
 
                 if (0 != compileProcess.ExitCode)
-                    throw new CompilationException("Compilation failed. Check exception's Compiler Output property for details.", compileProcess.StandardOutput.ReadToEnd());
+                    throw new CompilationException("Compilation failed. Check exception's Compiler Output property for details.", compileProcess.StandardOutput.ReadToEnd(), compileProcess.StandardError.ReadToEnd());
             }
         }
 

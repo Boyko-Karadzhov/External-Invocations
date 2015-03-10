@@ -35,5 +35,10 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Atl")]
         [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Mfc")]
         string AtlMfcInclude { get; }
+
+        /// <summary>
+        /// Gets the IDE path.
+        /// </summary>
+        string IDE { get; }
     }
 }
