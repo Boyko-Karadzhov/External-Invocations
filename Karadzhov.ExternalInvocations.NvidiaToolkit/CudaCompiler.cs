@@ -66,6 +66,8 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
 
             argList.Add(string.Join(" ", arguments.Files.Select(f => string.Format(CultureInfo.InvariantCulture, "\"{0}\"", f))));
 
+            argList.Add("--relocatable-device-code true");
+
             var result = string.Join(" ", argList);
             return result;
         }

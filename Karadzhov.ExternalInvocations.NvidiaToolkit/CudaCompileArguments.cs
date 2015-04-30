@@ -7,7 +7,7 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
     /// <summary>
     /// Instances of this class contain compilation arguments for the CUDA Compiler.
     /// </summary>
-    public class CudaCompileArguments : CCompileArguments
+    public sealed class CudaCompileArguments : CCompileArguments
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CudaCompileArguments"/> class.
