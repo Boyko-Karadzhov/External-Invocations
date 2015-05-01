@@ -3,9 +3,10 @@
 <Dictionary>
   <Words>
     <Recognized>
+      <Word>Cuda</Word>
       <Word>Karadzhov</Word>
       <Word>Nvidia</Word>
-      <Word>Cuda</Word>
+      <Word>Relocatable</Word>
     </Recognized>
   </Words>
 </Dictionary>

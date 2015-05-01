@@ -15,6 +15,7 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
         public CudaCompileArguments()
         {
             this.TargetProcessorArchitecture = Environment.Is64BitProcess ? ProcessorArchitecture.Amd64 : ProcessorArchitecture.X86;
+            this.GenerateRelocatableCode = true;
         }
 
         /// <summary>
@@ -32,5 +33,13 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
         /// The GPU compute capability.
         /// </value>
         public CudaComputeCapability ComputeCapability { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to generate relocatable device code.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if relocatable device code should be generated; otherwise, <c>false</c>.
+        /// </value>
+        public bool GenerateRelocatableCode { get; set; }
     }
 }
