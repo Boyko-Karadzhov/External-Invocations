@@ -13,7 +13,7 @@
         <summary>.NET assemblies used for invoking common executable tools in a separate process.
 - Contains API for invoking the VC compiler;</summary>
         <releaseNotes>0.4.0.0
-- Upgraded to .NET 4.6.1
+- Upgraded to .NET 4.6.1;
 0.3.0.1
 - fixed some compatibility issues;
 - option to call the CUDA compiler with "--relocatable-device-code" option. It is true by default;

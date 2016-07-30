@@ -39,8 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Karadzhov.Interop.DynamicLibraries, Version=1.2.0.0, Culture=neutral, PublicKeyToken=7a43160afbfa8ffe, processorArchitecture=MSIL">
-      <HintPath>..\packages\Karadzhov.Interop.DynamicLibraries.1.2.0\lib\net461\Karadzhov.Interop.DynamicLibraries.dll</HintPath>
+    <Reference Include="Karadzhov.Interop.DynamicLibraries, Version=1.2.0.9, Culture=neutral, PublicKeyToken=7a43160afbfa8ffe, processorArchitecture=MSIL">
+      <HintPath>..\packages\Karadzhov.Interop.DynamicLibraries.1.2.0.9\lib\net461\Karadzhov.Interop.DynamicLibraries.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

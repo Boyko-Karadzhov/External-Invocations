@@ -1,12 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karadzhov.ExternalInvocations.VisualStudioCommonTools", "Karadzhov.ExternalInvocations.VisualStudioCommonTools\Karadzhov.ExternalInvocations.VisualStudioCommonTools.csproj", "{B2ECA655-23C5-416E-B6AB-DF9C5D3AB605}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karadzhov.ExternalInvocations.VisualStudioCommonTools.Tests", "Karadzhov.ExternalInvocations.VisualStudioCommonTools.Tests\Karadzhov.ExternalInvocations.VisualStudioCommonTools.Tests.csproj", "{ABD68C03-32E0-464A-A579-FA6CFED77D14}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9F012B3E-CCE4-4A71-8FA6-8AF37D1D57D8}"
 	ProjectSection(SolutionItems) = preProject
+		Karadzhov.ExternalInvocations.nuspec = Karadzhov.ExternalInvocations.nuspec
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
