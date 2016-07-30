@@ -1,6 +1,9 @@
 # External-Invocations
 .NET assemblies used for invoking common executable tools in a separate process.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/ug9ioss7q2fjmxml?svg=true)](https://ci.appveyor.com/project/Boyko-Karadzhov/external-invocations)
+*Tests are not being ran automatically because of special environmental requirements.*
+
 ## Features
 - API for compiling code using the Visual Studio C/C++ Optimizing Compile;
 

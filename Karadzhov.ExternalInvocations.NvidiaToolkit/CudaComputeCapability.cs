@@ -6,6 +6,7 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
     /// </summary>
     public enum CudaComputeCapability
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         Cuda11,
         Cuda12,
         Cuda13,
@@ -16,5 +17,6 @@ namespace Karadzhov.ExternalInvocations.NvidiaToolkit
         Cuda35,
         Cuda50,
         Cuda52
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 }

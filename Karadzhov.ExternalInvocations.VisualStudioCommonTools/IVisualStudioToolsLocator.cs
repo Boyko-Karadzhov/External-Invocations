@@ -39,6 +39,7 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         /// <summary>
         /// Gets the IDE path.
         /// </summary>
+        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "IDE")]
         string IDE { get; }
     }
 }

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Karadzhov.ExternalInvocations</id>
+        <version>0.4.0.0</version>
+        <title>External-Invocations</title>
+        <authors>Boyko Karadzhov</authors>
+        <licenseUrl>https://github.com/Boyko-Karadzhov/External-Invocations/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Boyko-Karadzhov/External-Invocations</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>.NET assemblies used for invoking common executable tools in a separate process.
+- Contains API for invoking the VC compiler;</description>
+        <summary>.NET assemblies used for invoking common executable tools in a separate process.
+- Contains API for invoking the VC compiler;</summary>
+        <releaseNotes>0.4.0.0
+- Upgraded to .NET 4.6.1
+0.3.0.1
+- fixed some compatibility issues;
+- option to call the CUDA compiler with "--relocatable-device-code" option. It is true by default;
+0.2.0.0
+- Ability to invoke the CUDA compiler;
+0.1.0.0
+- Ability to compile binaries by invoking the Visual Studio C/C++ compiler;</releaseNotes>
+        <tags>c compile windows cuda</tags>
+    </metadata>
+    <files>
+        <file src="Karadzhov.ExternalInvocations.NvidiaToolkit\bin\Release\Karadzhov.ExternalInvocations.NvidiaToolkit.dll" target="lib" />
+        <file src="Karadzhov.ExternalInvocations.NvidiaToolkit\bin\Release\Karadzhov.ExternalInvocations.NvidiaToolkit.xml" target="lib" />
+        <file src="Karadzhov.ExternalInvocations.VisualStudioCommonTools\bin\Release\Karadzhov.ExternalInvocations.VisualStudioCommonTools.dll" target="lib" />
+        <file src="Karadzhov.ExternalInvocations.VisualStudioCommonTools\bin\Release\Karadzhov.ExternalInvocations.VisualStudioCommonTools.xml" target="lib" />
+    </files>
+</package>

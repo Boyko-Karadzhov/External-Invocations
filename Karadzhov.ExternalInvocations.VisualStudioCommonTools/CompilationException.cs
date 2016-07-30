@@ -44,8 +44,8 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         protected CompilationException(SerializationInfo serializationInfo, StreamingContext context)
             : base(serializationInfo, context)
         {
-            this.CompilerOutput = serializationInfo.GetString("CompilerOutput");
-            this.CompilerError = serializationInfo.GetString("CompilerError");
+            this.CompilerOutput = serializationInfo.GetString(nameof(this.CompilerOutput));
+            this.CompilerError = serializationInfo.GetString(nameof(this.CompilerError));
         }
 
         /// <summary>
@@ -90,10 +90,10 @@ namespace Karadzhov.ExternalInvocations.VisualStudioCommonTools
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             if (null == info)
-                throw new ArgumentNullException("info");
+                throw new ArgumentNullException(nameof(info));
 
-            info.AddValue("CompilerOutput", this.CompilerOutput);
-            info.AddValue("CompilerError", this.CompilerError);
+            info.AddValue(nameof(this.CompilerOutput), this.CompilerOutput);
+            info.AddValue(nameof(this.CompilerError), this.CompilerError);
 
             base.GetObjectData(info, context);
         }
